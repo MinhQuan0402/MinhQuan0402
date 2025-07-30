@@ -1313,16 +1313,16 @@ document.addEventListener('DOMContentLoaded', function() {
         questionsContainer.style.display = 'block';
         
         // Fetch questions and start quiz
-        fetchQuizQuestions().then(function(questions) {
-        // Get 10 random questions (change number as needed)
-        quizQuestions = getRandomSubset(questions, 10);
-        
-        // Update UI with question count
-        questionsCountDisplay.textContent = quizQuestions.length;
-        totalQuestionsDisplay.textContent = quizQuestions.length;
-        
-        // Load first question
-        loadQuestion(currentQuestionIndex);
+        fetchQuizQuestions().then((questions) => {
+            // Get 10 random questions (change number as needed)
+            quizQuestions = getRandomSubset(questions, 10);
+            
+            // Update UI with question count
+            questionsCountDisplay.textContent = quizQuestions.length;
+            totalQuestionsDisplay.textContent = quizQuestions.length;
+            
+            // Load first question
+            loadQuestion(currentQuestionIndex);
         });
     });
 
