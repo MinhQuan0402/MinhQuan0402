@@ -1312,18 +1312,17 @@ document.addEventListener('DOMContentLoaded', function() {
         startScreen.style.display = 'none';
         questionsContainer.style.display = 'block';
         
-        // Fetch questions and start quiz
-        fetchQuizQuestions().then((questions) => {
-            // Get 10 random questions (change number as needed)
-            quizQuestions = getRandomSubset(questions, 10);
-            
-            // Update UI with question count
-            questionsCountDisplay.textContent = quizQuestions.length;
-            totalQuestionsDisplay.textContent = quizQuestions.length;
-            
-            // Load first question
-            loadQuestion(currentQuestionIndex);
-        });
+        // fetchQuizQuestions() does not return a Promise, so remove .then()
+        quizQuestions = fetchQuizQuestions();
+        // Get 10 random questions (change number as needed)
+        quizQuestions = getRandomSubset(quizQuestions, 10);
+
+        // Update UI with question count
+        questionsCountDisplay.textContent = quizQuestions.length;
+        totalQuestionsDisplay.textContent = quizQuestions.length;
+
+        // Load first question
+        loadQuestion(currentQuestionIndex);
     });
 
     // Load a question
