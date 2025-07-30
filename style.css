@@ -697,6 +697,9 @@ div.intro-section>div:last-child {
 
 /* #region Footer */
 footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     width: 100%;
     text-align: center;
     background: black;
@@ -706,8 +709,29 @@ footer {
     font-size: small;
 }
 
+footer > p {
+    margin: 0.5em 0; /* spacing between paragraphs */
+}
+
 footer p:first-child{
     font-size: smaller;
+}
+
+.footer-qr{
+    display: none;
+    width: 100px; /* fixed size for QR code */
+    height: 100px; /* fixed size for QR code */
+}
+
+.footer-qr img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* maintain aspect ratio */
+}
+
+.footer-qr p {
+    font-size: 0.8em; /* smaller font size for QR code text */
+    margin: 0.5em 0; /* spacing between paragraphs */
 }
 
 footer nav ul {
@@ -2518,6 +2542,10 @@ a.underline-text-link:active {
 
     .zoom-controls {
         width: 50%;
+    }
+
+    .footer-qr {
+        display: block; /* hide QR code on larger screens */
     }
 }
 /* #endregion */
