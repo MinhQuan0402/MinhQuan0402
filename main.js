@@ -72,9 +72,9 @@ var currentSection = document.getElementById('home'); // default section
 currentSection.style.display = 'block'; // show the default section
 updateActiveButton(0); // update the active button to the first one
 
-const buttonClipSound = new Audio('/audio/Button-Click.mp3'); // sound for button click
-const pageFlipSound = new Audio('/audio/Page-Flip.mp3'); // sound for page flip
-const correctSound = new Audio('/audio/correct-choice.mp3'); // sound for correct answer
+const buttonClipSound = new Audio('./audio/Button-Click.mp3'); // sound for button click
+const pageFlipSound = new Audio('./audio/Page-Flip.mp3'); // sound for page flip
+const correctSound = new Audio('./audio/correct-choice.mp3'); // sound for correct answer
 
 document.querySelectorAll('button').forEach(function(button) {
     button.addEventListener('click', function() {
