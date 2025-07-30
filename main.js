@@ -767,7 +767,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const galaxyData = {
         "Milky Way": {
             type: "spiral",
-            image: "/images/Sun_in_Milky_Way-1.jpeg",
+            image: "./images/Sun_in_Milky_Way-1.jpeg",
             description: "The Milky Way is our home galaxy, a barred spiral galaxy with a diameter between 150,000 and 200,000 light-years. It contains between 100-400 billion stars, including our Sun, which is located on one of the spiral arms about 27,000 light-years from the galactic center.",
             distance: "We're inside it",
             size: "~100,000 light-years diameter",
@@ -776,7 +776,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         "Andromeda (M31)": {
             type: "spiral",
-            image: "/images/andromeda-galaxy.jpg",
+            image: "./images/andromeda-galaxy.jpg",
             description: "Andromeda is the nearest major galaxy to the Milky Way and is on a collision course with our galaxy. The collision is predicted to occur in about 4.5 billion years. Andromeda is a spiral galaxy that appears as a faint, fuzzy patch in the night sky.",
             distance: "2.537 million light-years",
             size: "~220,000 light-years diameter",
@@ -785,7 +785,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         "Whirlpool (M51)": {
             type: "spiral",
-            image: "/images/whirlpool-galaxy.jpg",
+            image: "./images/whirlpool-galaxy.jpg",
             description: "The Whirlpool Galaxy (also known as Messier 51) is a classic spiral galaxy located in the constellation Canes Venatici. It's famous for its well-defined spiral arms and is interacting with a smaller galaxy, creating a beautiful cosmic spectacle.",
             distance: "23 million light-years",
             size: "~60,000 light-years diameter",
@@ -794,7 +794,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         "M87": {
             type: "elliptical",
-            image: "/images/m87-galaxy.jpg",
+            image: "./images/m87-galaxy.jpg",
             description: "M87 is one of the most massive galaxies in the local universe and is notable for its supermassive black hole, which was the first to be directly imaged by the Event Horizon Telescope. This elliptical galaxy contains trillions of stars and a jet of energetic plasma that extends at least 5,000 light-years.",
             distance: "53 million light-years",
             size: "~240,000 light-years diameter",
@@ -803,7 +803,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         "M60": {
             type: "elliptical",
-            image: "/images/m60-galaxy.jpg",
+            image: "./images/m60-galaxy.jpg",
             description: "M60 is a giant elliptical galaxy in the Virgo Cluster. It's one of the largest galaxies in the cluster and is known to have a supermassive black hole at its center with a mass of about 4.5 billion solar masses.",
             distance: "55 million light-years",
             size: "~120,000 light-years diameter",
@@ -812,7 +812,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         "Large Magellanic Cloud": {
             type: "irregular",
-            image: "/images/large-magellanic-cloud.jpg",
+            image: "./images/large-magellanic-cloud.jpg",
             description: "The Large Magellanic Cloud (LMC) is a satellite galaxy of the Milky Way and is one of the closest galaxies to Earth. It's an irregular galaxy that shows some structure, including a bar and a spiral arm, suggesting it may have once been a barred spiral galaxy before being disrupted by the Milky Way's gravity.",
             distance: "158,200 light-years",
             size: "~14,000 light-years diameter",
@@ -821,7 +821,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         "Small Magellanic Cloud": {
             type: "irregular",
-            image: "/images/small-magellanic-cloud.jpg",
+            image: "./images/small-magellanic-cloud.jpg",
             description: "The Small Magellanic Cloud (SMC) is another satellite galaxy of the Milky Way. It's an irregular dwarf galaxy that, along with the LMC, forms the Magellanic Clouds visible in the Southern Hemisphere. It contains a rich population of variable stars.",
             distance: "199,000 light-years",
             size: "~7,000 light-years diameter",
@@ -830,7 +830,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         "Sombrero Galaxy (M104)": {
             type: "lenticular",
-            image: "/images/sombrero-galaxy.jpg",
+            image: "./images/sombrero-galaxy.jpg",
             description: "The Sombrero Galaxy is a lenticular galaxy with a bright nucleus, an unusually large central bulge, and a prominent dust lane in its inclined disk. Its appearance is similar to a sombrero hat, hence its name. It has a large population of globular clusters, estimated at about 2,000.",
             distance: "29 million light-years",
             size: "~50,000 light-years diameter",
@@ -1659,7 +1659,7 @@ function getTelescopeData(telescopeId) {
             orbit: "Low Earth Orbit (500 km)",
             duration: "3 years",
             agency: "NASA",
-            mainImage: "/images/X-Ray_Explorer_Satellite.jpg",
+            mainImage: "./images/X-Ray_Explorer_Satellite.jpg",
             description: "Uhuru was the first satellite dedicated to X-ray astronomy. It made significant contributions to our understanding of X-ray sources in the universe, including the discovery of the first X-ray binary star.",
             discoveries: [
                 {
@@ -1685,7 +1685,7 @@ function getTelescopeData(telescopeId) {
             orbit: "Mars Orbit",
             duration: "6 years",
             agency: "NASA",
-            mainImage: "/images/500px-Viking_spacecraft.jpg",
+            mainImage: "./images/500px-Viking_spacecraft.jpg",
             description: "Viking 1 was the first spacecraft to successfully land on Mars and conduct experiments on the Martian surface. It sent back the first images of the Martian landscape.",
             discoveries: [
                 {
@@ -1707,7 +1707,7 @@ function getTelescopeData(telescopeId) {
             orbit: "Sun-Earth L2 Lagrange Point (1.5 million km from Earth)",
             duration: "10 months",
             agency: "NASA & UKSA",
-            mainImage: "/images/IRAS.jpeg",
+            mainImage: "./images/IRAS.jpeg",
             description: "IRAS was the first space telescope to survey the entire sky in infrared wavelengths. It discovered thousands of new celestial objects, including comets, asteroids, and distant galaxies.",
             discoveries: [
                 {
@@ -1733,7 +1733,7 @@ function getTelescopeData(telescopeId) {
             orbit: "Low Earth Orbit (547 km)",
             duration: "30+ years and counting",
             agency: "NASA & ESA",
-            mainImage: "/images/hubble-space-telescope.jpg",
+            mainImage: "./images/hubble-space-telescope.jpg",
             description: "The Hubble Space Telescope has made more than 1.4 million observations since its mission began in 1990. Astronomers using Hubble data have published more than 17,000 scientific papers, making it one of the most productive scientific instruments ever built.",
             discoveries: [
                 {
@@ -1760,7 +1760,7 @@ function getTelescopeData(telescopeId) {
             orbit: "High Earth Orbit (139,000 km)",
             duration: "Minimum 5-year mission, extended to 20+ years",
             agency: "NASA",
-            mainImage: "/images/Chandra_artist_illustration.jpg",
+            mainImage: "./images/Chandra_artist_illustration.jpg",
             description: "Chandra is NASA's flagship mission for X-ray astronomy. It has provided unprecedented views of the universe in X-rays, revealing phenomena such as black holes, supernova remnants, and clusters of galaxies.",
             discoveries: [
                 {
@@ -1786,7 +1786,7 @@ function getTelescopeData(telescopeId) {
             orbit: "Sun-Earth L2 Lagrange Point (1.5 million km from Earth)",
             duration: "Minimum 5-year mission, extended to 16 years",
             agency: "NASA",
-            mainImage: "/images/spitzer20171013-768.jpg",
+            mainImage: "./images/spitzer20171013-768.jpg",
             description: "Spitzer was the first space telescope to detect light from exoplanets and has provided critical insights into the formation of stars and galaxies, as well as the structure of our own Milky Way galaxy.",
             discoveries: [
                 {
@@ -1812,7 +1812,7 @@ function getTelescopeData(telescopeId) {
             orbit: "Sun-Earth L2 Lagrange Point (1.5 million km from Earth)",
             duration: "Minimum 3.5-year mission, extended to 9 years",
             agency: "NASA",
-            mainImage: "/images/PIA18904~large.jpg",
+            mainImage: "./images/PIA18904~large.jpg",
             description: "Kepler was designed to survey a portion of our region of the Milky Way galaxy to discover Earth-size planets in or near the habitable zones of their stars. It has discovered thousands of exoplanets, revolutionizing our understanding of planetary systems.",
             discoveries: [
                 {
@@ -1838,7 +1838,7 @@ function getTelescopeData(telescopeId) {
             orbit: "Sun-Earth L2 Lagrange Point (1.5 million km from Earth)",
             duration: "Minimum 5-year mission, goal of 10+ years",
             agency: "NASA, ESA, CSA",
-            mainImage: "/images/jwst_artist_concept_0.jpg",
+            mainImage: "./images/jwst_artist_concept_0.jpg",
             description: "The James Webb Space Telescope is the largest, most powerful space telescope ever built. Its significantly improved infrared resolution and sensitivity allow it to view objects too old, distant, or faint for the Hubble Space Telescope.",
             discoveries: [
                 {
@@ -1864,7 +1864,7 @@ function getTelescopeData(telescopeId) {
             orbit: "Sun-Earth L2 Lagrange Point (1.5 million km from Earth)",
             duration: "Minimum 5-year mission",
             agency: "NASA",
-            mainImage: "/images/nancy-grace.jpg",
+            mainImage: "./images/nancy-grace.jpg",
             description: "The Nancy Grace Roman Space Telescope will be a wide-field observatory that will help answer fundamental questions in astrophysics and cosmology. It will have a field of view 100 times larger than that of the Hubble Space Telescope.",
             discoveries: [
                 {
