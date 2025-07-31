@@ -1,58 +1,11 @@
 /* #region Import Fonts and Styles */
 @font-face {
     font-family: 'Helvetica Neue';
-    src: url('./fonts/helvetica-neue-5/HelveticaNeueThin.otf') format('opentype');
-    font-weight: 100;
+    src: url('./fonts/HelveticaNeueMedium.otf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'Helvetica Neue';
-    src: url('./fonts/helvetica-neue-5/HelveticaNeueUltraLight.otf') format('opentype'); /* ultra light weight */
-    font-weight: 200;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Helvetica Neue';
-    src: url('./fonts/helvetica-neue-5/HelveticaNeueLight.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Helvetica Neue';
-    src: url('./fonts/helvetica-neue-5/HelveticaNeueRoman.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Helvetica Neue';
-    src: url('./fonts/helvetica-neue-5/HelveticaNeueMedium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Helvetica Neue';
-    src: url('./fonts/helvetica-neue-5/HelveticaNeueBold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Helvetica Neue';
-    src: url('./fonts/helvetica-neue-5/HelveticaNeueBlack.otf') format('opentype');
-    font-weight: 900;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Helvetica Neue';
-    src: url('./fonts/helvetica-neue-5/HelveticaNeueItalic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'Helvetica Neue';
-    src: url('./fonts/helvetica-neue-5/HelveticaNeueBoldItalic.otf') format('opentype');
-    font-weight: 700;
-    font-style: italic;
-}
+
 @font-face {
     font-family: 'Orbitron';
     src: url('./fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
@@ -891,7 +844,7 @@ footer nav ul li a {
 .earth-image {
     background-image: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* semi-transparent overlay */
-    url('images/overview_earth.webp');
+    url('images/overview_earth.jpg');
     background-size: cover;
     background-position: center;
 }
