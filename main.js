@@ -310,7 +310,7 @@ draggables.forEach(function(el) {
 
 var checkPlanetsBtn = document.getElementById('check-planets-btn');
 var resetPlanetsBtn = document.getElementById('reset-planets-btn');
-var planetsTimer = document.getElementById('planets-timer');
+var planetsTimer = document.getElementById('planets-game-timer');
 var timerInterval;
 
 // Check order
@@ -348,6 +348,41 @@ checkPlanetsBtn.addEventListener('click', function () {
             draggable.setAttribute('draggable', 'false'); // disable dragging
             draggable.classList.add('disabled'); // add a disabled class for styling
         });
+
+        let planetsGameStart = document.getElementById('planets-game-start');
+        let timerMinutesText = document.getElementById('timer-minutes');
+        let timerSecondsText = document.getElementById('timer-seconds');
+        let planetGameResult = document.getElementById('planet-game-result');
+
+        //create a reset button
+        const resetButton = document.createElement('button');
+        resetButton.textContent = "Restart Game";
+        resetButton.className = "button-link";
+
+        // Add the reset button to the game section
+        document.querySelector('#planet-game .planet-game-controls').appendChild(resetButton);
+
+        // Add click event to reset button
+        resetButton.addEventListener('click', function() {
+            clearInterval(timerInterval);
+            planetGameResult.textContent = '';
+            planetsGameStart.style.display = 'flex';
+            planetsTimer.style.color = 'white';
+            resetButton.remove(); // remove the reset button
+            
+            // re-enable the draggable elements
+            draggables.forEach(function(draggable) {
+                draggable.setAttribute('draggable', 'true'); // enable dragging
+                draggable.classList.remove('disabled'); // remove the disabled class
+            });
+            checkPlanetsBtn.disabled = false; // enable the check button
+            resetPlanetsBtn.disabled = false; // enable the reset button
+            resetPlanetsBtn.click(); // reset the game
+            
+            timerMinutesText.textContent = String(Math.floor(totalTime / 60)).padStart(2, '0');
+            timerSecondsText.textContent = String(totalTime % 60).padStart(2, '0');
+        });
+
     } else {
         result.textContent = "Try again!";
         result.style.color = "red";
