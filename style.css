@@ -801,7 +801,6 @@ footer nav ul li a {
     justify-content: center;
     color: var(--secondary-color);
     overflow: hidden;
-    /* Ensure same box model */
     box-sizing: border-box; 
 }
 

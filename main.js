@@ -208,7 +208,7 @@ draggables.forEach(function(item) {
 });
 
 draggablesContainer.addEventListener('dragover', function (e) {
-    e.preventDefault(); // prevent default to allow drop
+    e.preventDefault();
     if (dragged) {
         const afterElement = getDragAfterElement(this, e.clientX);
         if (afterElement) {
@@ -250,7 +250,7 @@ draggables.forEach(function(el) {
         touchDragged = this;
         this.classList.add('dragging');
         e.preventDefault();
-    }, { passive: false });
+    }, { passive: false }); // prevent default to allow touchstart
 
     el.addEventListener('touchmove', function(e) {
         if (!touchDragged) return;
@@ -274,8 +274,9 @@ draggables.forEach(function(el) {
         const touch = e.changedTouches[0];
         let dropped = false;
 
+        // Check if the touch is within the draggables container
         const draggablesContainerRect = draggablesContainer.getBoundingClientRect();
-        console.log(touch.clientX, touch.clientY, draggablesContainerRect.left, draggablesContainerRect.right, draggablesContainerRect.top, draggablesContainerRect.bottom);
+        //console.log(touch.clientX, touch.clientY, draggablesContainerRect.left, draggablesContainerRect.right, draggablesContainerRect.top, draggablesContainerRect.bottom);
         if (
                 touch.clientX > draggablesContainerRect.left &&
                     touch.clientX < draggablesContainerRect.right &&
@@ -287,7 +288,7 @@ draggables.forEach(function(el) {
                 touchDragged = null;
                 return;
             } 
-        else {
+        else { // If the touch is within the container, check for dropzones
             dropzones.forEach(function(zone) {
                 const rect = zone.getBoundingClientRect();
                 if (
@@ -320,16 +321,16 @@ checkPlanetsBtn.addEventListener('click', function () {
         }.bind(this), 100);
     const placed = [];
     dropzones.forEach(function(zone) {
-        const planet = Array.from(zone.querySelectorAll('.planet-draggable')).map(function(el) {
+        const planet = Array.from(zone.querySelectorAll('.planet-draggable')).map(function(el) { // get all draggable elements in the dropzone
             return el.dataset.planet;
         });
-        placed.push(...planet);
+        placed.push(...planet); 
     });
     
     const result = document.getElementById('planet-game-result'); // get the result element
     if (placed.length !== correctOrder.length) {
         result.textContent = "Arrange all 8 planets in order!"; // if the number of placed planets is not equal to the correct order, show an error message
-        result.style.color = "red"; // set the text color to red
+        result.style.color = "red"; 
         return;
     }
 
@@ -998,8 +999,8 @@ document.addEventListener('DOMContentLoaded', function() {
         galaxyMap.style.cursor = 'grabbing';
         startX = e.pageX - galaxyMap.offsetLeft;
         startY = e.pageY - galaxyMap.offsetTop;
-        scrollLeft = galaxyMap.scrollLeft;
-        scrollTop = galaxyMap.scrollTop;
+        scrollLeft = galaxyMap.scrollLeft; // Save the current scroll position
+        scrollTop = galaxyMap.scrollTop; 
     });
     
     galaxyMap.addEventListener('mouseleave', function() {
@@ -1336,7 +1337,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const shuffled = [...questions];
         for (let i = shuffled.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; 
         }
         // Return first 'count' items
         return shuffled.slice(0, count);
@@ -1347,7 +1348,6 @@ document.addEventListener('DOMContentLoaded', function() {
         startScreen.style.display = 'none';
         questionsContainer.style.display = 'block';
         
-        // fetchQuizQuestions() does not return a Promise, so remove .then()
         quizQuestions = fetchQuizQuestions();
         // Get 10 random questions (change number as needed)
         quizQuestions = getRandomSubset(quizQuestions, 10);
@@ -1922,11 +1922,11 @@ function getTelescopeData(telescopeId) {
     return telescopes[telescopeId] || {};
 }
 
-function animateTimelineEntry() {
-    // Optional animation when the timeline first loads
+function animateTimelineEntry() { // Initial animation for the timeline entry
     const timelineTrack = document.querySelector('.timeline-track');
     const nodes = document.querySelectorAll('.telescope-node');
     
+    // Set initial styles for fade-in effect
     timelineTrack.style.opacity = 0;
     nodes.forEach(function(node) {
         node.style.opacity = 0;
